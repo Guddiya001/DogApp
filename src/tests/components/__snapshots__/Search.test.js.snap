@@ -10,7 +10,31 @@ exports[`MyComponent should display data fetched from API 1`] = `
     >
       <input
         class="form-control mx-auto"
-        data-testid="search"
+        data-testid="searchAnimal"
+        id="search"
+        placeholder="search"
+        type="search"
+        value=""
+      />
+      <i
+        class="fas fa-search"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Search box testing for debouncing functionality should display snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="form py-3"
+  >
+    <div
+      class="form-container w-50 mx-auto"
+    >
+      <input
+        class="form-control mx-auto"
+        data-testid="searchAnimal"
         id="search"
         placeholder="search"
         type="search"

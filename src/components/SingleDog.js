@@ -17,21 +17,21 @@ const SingleDog = () => {
     <>
       <section>
         <section>
-          <div class="container h-100 w-100 py-4 mx-auto">
+          <div className="container h-100 w-100 py-4 mx-auto">
             {loading ? (
               <Loader />
             ) : (
               <div
-                class="row h-100 m-0 p-0 my-2 w-100 align-items-center py-4 "
+                className="row h-100 m-0 p-0 my-2 w-100 align-items-center py-4 "
                 id="details"
               >
-                <div class="col-md-6 order-md-2 order-2 text-md-start text-center py-4 px-4 ">
-                  <h4 class="font-weight-light animation">
+                <div className="col-md-6 order-md-2 order-2 text-md-start text-center py-4 px-4 ">
+                  <h4 className="font-weight-light animation">
                     <b>{dog[0]?.name}</b>
                   </h4>
-                  <div class="description py- animation  overflow-hidden">
+                  <div className="description py- animation  overflow-hidden">
                     <span>
-                      <i class="fas fa-paw"></i>
+                      <i className="fas fa-paw"></i>
                     </span>
                     <p>
                       <span>Weight</span>:{dog[0]?.weight?.imperial} Kg
@@ -49,21 +49,21 @@ const SingleDog = () => {
                       <span>Temperament</span>:{dog[0]?.temperament}{" "}
                     </p>
                     <span>
-                      <i class="fas fa-paw"></i>
+                      <i className="fas fa-paw"></i>
                     </span>
                   </div>
                   <NavLink to="/">
                     {" "}
                     <span>
-                      <i class="fas fa-chevron-left"></i>
+                      <i className="fas fa-chevron-left"></i>
                     </span>
                   </NavLink>
                 </div>
-                <div class="col-md-6 order-md-1 order-1 text-center p-0">
+                <div className="col-md-6 order-md-1 order-1 text-center p-0">
                   <img
                     src={`https://cdn2.thedogapi.com/images/${dog[0]?.reference_image_id}.jpg`}
                     alt={dog[0]?.name}
-                    class="img-fluid"
+                    className="img-fluid"
                   />
                 </div>
               </div>

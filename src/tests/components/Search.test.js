@@ -7,7 +7,7 @@ import Search from "../../components/Search";
 
 const mockStore = configureStore([thunk]);
 
-describe('MyComponent', () => {
+describe('Search box testing for debouncing functionality', () => {
     let store;
     let initialState
 
@@ -93,7 +93,7 @@ describe('MyComponent', () => {
         store = mockStore(initialState);
     });
 
-    it('should display data fetched from API', async () => {
+    it('should display snapshot', async () => {
         const { asFragment } = render(
             <Provider store={store}>
                 <Search />
@@ -104,18 +104,12 @@ describe('MyComponent', () => {
 
     });
 
-
-
     it('should debounce a function', () => {
 
-        const { asFragment } = render(
-            <Provider store={store}>
-                <Search />
-            </Provider>
-
-        );
-        const { getByTestId } = render(<asFragment />);
-        const input = getByTestId("search");
+        const { getByTestId } = render(<Provider store={store}>
+            <Search />
+        </Provider>);
+        const input = getByTestId("searchAnimal");
 
         fireEvent.change(input, { target: { value: "Belgian Tervuren" } });
         expect(setTimeout).toHaveBeenCalledTimes(1);

@@ -8,17 +8,17 @@ import Loader from "./Loader";
 import Search from "./Search";
 const Home = () => {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchDogs());
-    console.log("api call");
-  }, [dispatch]);
-  const { dogs, dog, loading } = useSelector((state) => ({ ...state.dogsReducer }));
+     }, [dispatch]);
+
+  const { dogs, loading } = useSelector((state) => ({ ...state.dogsReducer }));
   const [animals, setAnimal] = useState(...dogs);
   useEffect(() => {
-    setAnimal(dogs)
-  }, [dogs])
+      setAnimal(dogs)
+   }, [dogs])
 
-console.log(dog, " -- ", dogs)
   const [sorted, setSorted] = useState({ sorted: "id", reversed: false });
 
   const sortById = () => {
@@ -111,15 +111,14 @@ console.log(dog, " -- ", dogs)
                   </th>
                 </tr>
               </thead>
-              <tbody>{//renderanimals()
-              }</tbody>
-            </table>
+              </table>
 
             {loading ? (
               <Loader />
-            ) : animals ? (
+            ) : animals?.length >1 ? (
               animals?.map((element) => {
                 let {
+                  id,
                   name,
                   bred_for,
                   life_span,
@@ -127,7 +126,7 @@ console.log(dog, " -- ", dogs)
                   reference_image_id,
                 } = element;
                 return (
-                  <Cards
+                  <Cards key={id}
                     name={name}
                     bred_for={bred_for}
                     life_span={life_span}

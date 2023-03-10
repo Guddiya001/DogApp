@@ -1,16 +1,12 @@
 import React from "react";
 import { useState } from "react";
-//import { useDispatch } from "react-redux/es/hooks/useDispatch";
-import { useAppDispatch, useAppSelector } from '../hooks'
+import { useAppDispatch } from '../hooks'
 import { fetchDogs, searchFetchDogs } from "../redux/actions";
 const Search = () => {
   const [search, setSearch] = useState("");
- 
 
   const searchAnimal = (event) => {
-      let en = event
-    setSearch(en);
-console.log('searchAnimal',en)
+    setSearch(event);
     let timeoutId;
     if (timeoutId) {
       clearTimeout(timeoutId);
@@ -39,7 +35,7 @@ console.log('searchAnimal',en)
               searchAnimal(event.target.value)
             }}
             value={search}
-            data-testid="search"
+            data-testid="searchAnimal"
           />
           <i className="fas fa-search"></i>
         </div>
