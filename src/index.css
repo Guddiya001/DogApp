@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+body {
+  background-color: #2b2e44;
+}
+
+.bg-dark {
+  background-color: #364059 !important;
+}
+
+.form-control {
+  font-size: 1.2rem;
+  padding: 8px;
+  text-transform: capitalize;
+  border: 1px solid #e6e5e5;
+  border-radius: 20px;
+  box-shadow: 0px 0px 8px 1px rgb(0 0 0 / 10%);
+  outline: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  background-color: transparent;
+}
+
+.form-control:focus {
+  background-color: #fff;
+  border-color: transparent !important;
+  box-shadow: 0px 0px 10px 5px rgb(0 0 0 / 10%);
+}
+
+.form-container {
+  position: relative;
+}
+
+.fa-search {
+  font-size: 15px;
+  color: #fff !important;
+  border: 1px solid #f47651;
+  outline: none;
+  background-color: #f47651;
+  border-color: #f47651;
+  height: 75%;
+  width: 50px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  position: absolute;
+  right: 6px;
+  top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.product-card {
+  width: 100%;
+  height: 325px;
+  box-shadow: 0 5px 35px 0 rgb(0 0 0 / 8%);
+  background-color: #2e3247;
+  border-radius: 20px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-evenly;
+  justify-content: space-evenly;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-content: center;
+  align-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin: 15px auto;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+.product-card:hover {
+  transform: translateY(-20px);
+  transition: all ease 1s;
+}
+.product-card h3 {
+  font-size: 1.3rem;
+  padding: 3px 0px;
+  color: #fff;
+  margin: 0;
+  font-weight: 600;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  overflow: hidden;
+  word-break: break-word;
+  -webkit-box-orient: vertical;
+}
+
+.product-card p {
+  font-size: 1rem;
+  margin-bottom: 2px;
+  margin-bottom: 0;
+  color: #9fabb2;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  overflow: hidden;
+  word-break: break-word;
+  -webkit-box-orient: vertical;
+}
+
+.product-image-caption {
+  padding: 15px;
+}
+
+.btn-primary {
+  background-color: #f47651 !important;
+  border-color: #f47651 !important;
+  padding: 6px 20px;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+.btn-primary:hover {
+  background-color: #00cc6c !important;
+  border-color: #00cc6c !important;
+  transition: all 0.5s ease-in-out;
+}
+#details h4 {
+  font-size: 2.3rem;
+  padding-bottom: 5px;
+  color: #fff;
+}
+
+#details p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #999;
+  margin-bottom: 2px;
+}
+
+#details .fas {
+  font-size: 2rem;
+  padding: 5px 0px;
+}
+#details .fas.fa-paw {
+  color: #f47651;
+  transform: rotate(-45deg);
+}
+#details .fas.fa-chevron-left {
+  color: #f9f9f9;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+}
+#details .fas.fa-chevron-left:hover {
+  color: #00cc6c;
+  transition: all 0.5s ease-in-out;
+}
+
+#details p span {
+  color: #f9f9f9;
+}
+#details img {
+  width: 95%;
+  box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+#details .btn-primary {
+  padding: 0.5rem 3rem;
+  margin: 10px 0px;
+  background-color: #32b768;
+  border-color: #32b768;
+  transition: all 0.5s ease;
+}
+
+#details .btn-primary:hover {
+  background-color: hsl(171, 66%, 44%);
+  border-color: hsl(171, 66%, 44%);
+}
+
+#details img:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: all ease 1s;
+}
+
+@media (max-width: 596px) {
+  .w-50 {
+    width: 80% !important;
+  }
+  #details .fas.fa-chevron-left {
+    top: 0.3rem;
+  }
+}

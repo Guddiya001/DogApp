@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyComponent should display data fetched from API 1`] = `
+<DocumentFragment>
+  <div
+    class="form py-3"
+  >
+    <div
+      class="form-container w-50 mx-auto"
+    >
+      <input
+        class="form-control mx-auto"
+        data-testid="search"
+        id="search"
+        placeholder="search"
+        type="search"
+        value=""
+      />
+      <i
+        class="fas fa-search"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
